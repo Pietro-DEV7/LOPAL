@@ -1,45 +1,45 @@
-function calculadora() {
+    function calculadora() {
 
-    let continuar = true;
+        let continuar = true;
 
-    do {
+        do {
 
-        let resultado = 0.0;
+            let resultado = 0.0;
 
-        let operando1 = parseFloat(prompt("Digite o primeiro número: "));
-        let operando2 = parseFloat(prompt("Digite o segundo número: "));
-        let operador = prompt("Digite uma das operações (+ - * / ): ");
+            let operando1 = parseFloat(prompt("Digite o primeiro número: "));
+            let operando2 = parseFloat(prompt("Digite o segundo número: "));
+            let operador = prompt("Digite uma das operações (+ - * / ): ");
 
-        if (operador === "+") {
-            resultado = operando1 + operando2;
+            if (operador === "+") {
+                resultado = operando1 + operando2;
 
-        } else if (operador === "-") {
-            resultado = operando1 - operando2;
+            } else if (operador === "-") {
+                resultado = operando1 - operando2;
 
-        } else if (operador === "*") {
-            resultado = operando1 * operando2;
+            } else if (operador === "*") {
+                resultado = operando1 * operando2;
 
-        } else if (operador === "/") {
+            } else if (operador === "/") {
 
-            if (operando2 === 0) {
-                alert("Não é possível dividir por zero.");
+                if (operando2 === 0) {
+                    alert("Não é possível dividir por zero.");
+                    continue;
+                }
+
+                resultado = operando1 / operando2;
+
+            } else {
+                alert("Operador inválido.");
                 continue;
             }
 
-            resultado = operando1 / operando2;
+            alert("Resultado: " + operando1 + " " + operador + " " + operando2 + " = " + resultado);
 
-        } else {
-            alert("Operador inválido.");
-            continue;
-        }
+            let resposta = prompt("Deseja fazer outra operação? (sim / nao)");
 
-        alert("Resultado: " + operando1 + " " + operador + " " + operando2 + " = " + resultado);
+            if (resposta.toLowerCase() !== "sim") {
+                continuar = false;
+            }
 
-        let resposta = prompt("Deseja fazer outra operação? (sim / nao)");
-
-        if (resposta.toLowerCase() !== "sim") {
-            continuar = false;
-        }
-
-    } while (continuar);
-}
+        } while (continuar);
+    }

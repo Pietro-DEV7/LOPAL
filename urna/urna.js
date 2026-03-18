@@ -63,9 +63,9 @@
           "Nulos: " + nulos + " voto(s) " +
           porcent_cand_nulo + " % do total. \n "
 
-        );
-      
-      }
-
+      );
+    
     }
+
+  }
 
