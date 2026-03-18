@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript no body</title>
+</head>
+<body>
+    <h2>exemplo de JavaScript no body</h2>
+    <p id="demo">Esse é um parágrafo.</p>
+
+    <button type="button" onclick="minhaFunc()">Clique aqui</button>
+    <script>
+        function minhaFunc(){
+          document.getElementById("demo"). innerHTML = "O parágrafo mudou";
+        }
+    </script>
+</body>
+</html>
